@@ -27,7 +27,7 @@ public class LocatorBarRendererMixin {
         String playerName = self.id().<String>map(
                 uuid -> {
                     PlayerInfo info = mc.player.connection.getPlayerInfo(uuid);
-                    return info != null ? info.getProfile().getName() : null;
+                    return info != null ? info.getProfile().name() : null;
                 },
                 name -> name
         );
